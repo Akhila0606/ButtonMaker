@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Maker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    .input-box {
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    label {
+      font-size: 14px;
+      color: #444;
+      flex: 1;
+    }
+
+    input {
+      flex: 1;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #createBtn {
+      background: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    #createBtn:hover {
+      background: #0056b3;
+    }
+
+    #preview {
+      margin-top: 25px;
+      text-align: center;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      min-height: 80px;
+    }
+
+    #preview button {
+      transition: 0.3s;
+    }
+
+    #preview button:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Button Maker</h2>
+
+  <div class="form-container">
+    <div class="input-box">
+      <label>Button Text:</label>
+      <input type="text" id="btnText" placeholder="Enter text">
+    </div>
+
+    <div class="input-box">
+      <label>Width (px):</label>
+      <input type="number" id="btnWidth" placeholder="100">
+    </div>
+
+    <div class="input-box">
+      <label>Height (px):</label>
+      <input type="number" id="btnHeight" placeholder="40">
+    </div>
+
+    <div class="input-box">
+      <label>Background:</label>
+      <input type="color" id="btnBg" value="#4CAF50">
+    </div>
+
+    <div class="input-box">
+      <label>Text Color:</label>
+      <input type="color" id="btnColor" value="#ffffff">
+    </div>
+
+    <div class="input-box">
+      <label>Border Radius (px):</label>
+      <input type="number" id="btnRadius" placeholder="5">
+    </div>
+
+    <button id="createBtn" onclick="createButton()">Create Button</button>
+  </div>
+
+  <div id="preview">
+    <p>Button Will Appear Here</p>
+  </div>
+
+  <script src="btn.js"></script>
+</body>
+</html>
